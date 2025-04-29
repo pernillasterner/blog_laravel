@@ -14,7 +14,6 @@ class BlogPost extends Model
         'user_id'
     ];
 
-
     /**
      * Get User of BlogPost
      *

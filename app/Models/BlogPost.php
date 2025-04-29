@@ -9,7 +9,6 @@ class BlogPost extends Model
     protected $fillable = [
         'title',
         'content',
-        'published-at',
-        'user_id',
+        'published_at',
     ];
 }

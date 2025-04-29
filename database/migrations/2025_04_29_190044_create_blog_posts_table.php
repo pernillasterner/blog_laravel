@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->timestamp('published_at')->nullable();
 
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
 
             $table->timestamps();
         });

@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::resource('blog_posts', \App\Http\Controllers\BlogPostController::class)->only(['index']);
+Route::resource('blog_posts', \App\Http\Controllers\BlogPostController::class)->only(['index', 'show']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

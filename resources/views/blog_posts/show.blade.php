@@ -1,9 +1,9 @@
-<div>
+<x-layouts.app :title="__('Blog Posts')">
     <a href="{{ route('blog_posts.index') }}">BACK</a>
 
-    <h2>{{ $post->title }}</h2>
+    <flux:heading size="xl">{{ $post->title }}</flux:heading>
 
-    <p>{{ $post->content }}</p>
+    <flux:text>{{ $post->content }}</flux:text>
 
-    <p>{{ $post->user->name }}</p>
-</div>
+    <flux:text>Author: {{ $post->user->name }}</flux:text>
+</x-layouts.app>

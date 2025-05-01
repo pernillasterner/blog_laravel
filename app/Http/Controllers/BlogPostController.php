@@ -18,4 +18,22 @@ class BlogPostController extends Controller
             'post' => $blog_post
         ]);
     }
+
+    public function store()
+    {
+        $blog_post = BlogPost::create(
+        [
+            'title' => request('title'),
+            'content' => request('content'),
+            'published_at' => request('published_at'),
+            'user_id' => auth()->id(),
+        ]
+    );
+        return redirect()->route('blog_posts.index', $blog_post);
+    }
+
+    public function update(BlogPost $blog_post)
+    {
+        return redirect()->route('blog_posts.show', $blog_post);
+    }
 }
